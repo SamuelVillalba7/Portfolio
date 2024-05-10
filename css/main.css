@@ -45,59 +45,133 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 90vh 400px 400px;
-  grid-gap: 20px;
+  grid-gap: 35px;
   grid-template-areas: "headphone headphone headphone headphone" "earphone gadgets laptop laptop" "console console oculus speaker";
 }
 
 .categoria {
   border-radius: 1.875rem;
-  padding: 16% 0 7% 9%;
   position: relative;
 }
-.categoria__caja {
-  border: 1px solid green;
+.categoria__caja--earphone {
+  margin-bottom: 20px;
 }
-.categoria__caja-top {
-  border: 1px solid blue;
+.categoria__caja--gadgets {
+  margin-bottom: 20px;
 }
 .categoria__caja-bottom {
   display: flex;
   justify-content: space-between;
-  border: 1px solid violet;
   margin-top: 1.7rem;
 }
 .categoria__img {
-  border: 1px solid red;
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 90%;
+  width: auto;
+  max-width: 100%;
   height: auto;
-  max-height: 90vh;
 }
-.categoria__span {
-  font-size: 5rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  line-height: 120px;
-  letter-spacing: -2px;
+.categoria__img--headphone {
+  max-width: 90%;
+  max-height: 90vh;
+  left: 5%;
+}
+.categoria__img--earphone {
+  bottom: 0;
+  top: unset;
+}
+.categoria__img--gadgets {
+  left: 20%;
+  top: 5%;
+}
+.categoria__img--console {
+  top: unset;
+  left: unset;
+  bottom: -12%;
+  right: 0;
+}
+.categoria__img--laptop {
+  left: 25%;
+  top: 5%;
+}
+.categoria__img--oculus {
+  top: unset;
+  left: 0;
+  bottom: 0;
+  border-radius: 1.875rem;
+  height: 80%;
+  object-fit: cover;
+}
+.categoria__img--speaker {
+  bottom: -10%;
+  left: 15%;
+  top: unset;
+  height: 70%;
+  object-fit: cover;
 }
 .categoria__h2 {
-  font-size: 1.875rem;
+  color: white;
+  font-size: 1rem;
   font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: -0.4px;
+}
+.categoria__h2--headphone {
+  font-size: 1.875rem;
+  color: #000;
   font-weight: 500;
-  line-height: 43px;
   letter-spacing: -1.3px;
   margin: 0 0 -11px;
 }
+.categoria__h2--console {
+  color: #000;
+}
+.categoria__span {
+  color: white;
+  font-size: 1.875rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 46px;
+  letter-spacing: -1px;
+  margin: 0 0 -5px;
+}
+.categoria__span--headphone {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 120px;
+  letter-spacing: -2px;
+  margin: 0;
+  color: #000;
+}
+.categoria__span--console {
+  color: #000;
+}
 .categoria__p {
-  font-size: 13rem;
+  font-size: 3.125rem;
   color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+  line-height: 60px;
+  letter-spacing: -2.9px;
+  opacity: 0.2;
+  margin-bottom: 20px;
+}
+.categoria__p--headphone {
+  font-size: 10.5vw;
   line-height: 150px;
   letter-spacing: -2.9px;
+  opacity: unset;
+  margin-bottom: 0px;
+}
+.categoria__p--console {
+  opacity: unset;
+  font-size: 4rem;
+}
+.categoria__p--laptop {
+  font-size: 4rem;
 }
 .categoria__boton {
   font-family: "Montserrat", sans-serif;
@@ -105,14 +179,34 @@ body {
   position: relative;
   background-color: #f42c37;
   border-radius: 2rem;
-  height: 2rem;
-  width: 11rem;
   text-align: center;
+  padding: 10px 30px;
+  text-decoration: none;
+  z-index: 999;
+}
+.categoria__boton--headphone {
   padding: 5px 10px;
   padding-top: 15px;
+  height: 2rem;
+  width: 11rem;
+}
+.categoria__boton--gadgets {
+  background-color: white;
+  color: #fec62e;
+}
+.categoria__boton--laptop {
+  background-color: white;
+  color: #f42c37;
+}
+.categoria__boton--oculus {
+  background-color: white;
+  color: #2dd06e;
+}
+.categoria__boton--speaker {
+  background-color: white;
+  color: #147aff;
 }
 .categoria__descripcion {
-  border: 1px solid red;
   text-align: right;
   margin-right: 6rem;
   font-family: "Montserrat", sans-serif;
@@ -130,32 +224,63 @@ body {
 .categoria--headphone {
   background: linear-gradient(to right, #cfcfcf, #f5f5f5);
   grid-area: headphone;
+  padding: 16% 0 7% 9%;
 }
 .categoria--earphone {
-  background-color: black;
+  background-color: #222222;
   grid-area: earphone;
+  display: flex;
+  align-items: end;
+  padding-left: 10%;
+  padding-bottom: 12%;
 }
 .categoria--gadgets {
-  background-color: yellow;
+  background-color: #fec62e;
   grid-area: gadgets;
+  display: flex;
+  align-items: end;
+  padding-left: 10%;
+  padding-bottom: 12%;
 }
 .categoria--laptop {
-  background-color: red;
+  background-color: #f42c37;
   grid-area: laptop;
+  padding: 19% 7% 4% 12%;
 }
 .categoria--console {
-  background-color: lightblue;
+  background: linear-gradient(to right, #cfcfcf, #f5f5f5);
   grid-area: console;
+  padding: 11% 7% 12% 14%;
 }
 .categoria--oculus {
-  background-color: green;
+  background-color: #2dd06e;
   grid-area: oculus;
+  display: flex;
+  align-items: start;
+  padding-top: 12%;
+  padding-left: 10%;
 }
 .categoria--speaker {
-  background-color: blue;
+  background-color: #147aff;
   grid-area: speaker;
+  display: flex;
+  align-items: start;
+  padding-left: 10%;
+  padding-top: 12%;
 }
 
+.caracteristicas {
+  height: 600px;
+}
+
+@media (max-width: 1700px) {
+  body {
+    padding: 0 2rem;
+  }
+  .categoria__p--headphone {
+    font-size: 12vw;
+  }
+}
 /* fin header  */
 
 /*# sourceMappingURL=main.css.map */
