@@ -9,7 +9,7 @@ $fuente-secundaria:"Poppins", sans-serif;
 
 body{
     padding: 0 9rem;
-    background-color: red;
+    background-color: white;
 }
 
 
@@ -342,9 +342,65 @@ body{
 
 }
 
-.caracteristicas{
-    height: 600px;
+.servicios-container{
+    height: 100px;
+    padding-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    border: #000 solid 1px;
 }
+
+.servicio{
+    width: 20%;
+    display: flex;
+    border: red solid 1px;
+}
+
+
+
+
+
+
+.oferta{
+    border: red solid 1px;
+    display: flex;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    border-radius: 1.875rem;
+    background-color: #f42c37;
+    color: white;
+    
+
+    &__caja{
+        border: green solid 1px;
+        &--primera{
+            width: 60%;
+            padding: 9% 4% 5% 9%;
+            
+        }
+        &--segunda{
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__texto{
+        padding: 9% 4% 5% 21%;
+    }
+
+    &__img{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+
+
+
+}
+
 
 
 @media (max-width: 1700px) {
