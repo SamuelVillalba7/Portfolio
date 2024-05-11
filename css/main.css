@@ -281,6 +281,18 @@ body {
   width: 20%;
   display: flex;
   border: red solid 1px;
+  justify-content: space-between;
+}
+.servicio__img {
+  max-width: 100%;
+  border: green solid 3px;
+}
+.servicio__texto {
+  border: #fec62e solid 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .oferta {
@@ -299,20 +311,58 @@ body {
 .oferta__caja--primera {
   width: 60%;
   padding: 9% 4% 5% 9%;
+  font-family: "Montserrat", sans-serif;
 }
 .oferta__caja--segunda {
   width: 40%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  flex-direction: column;
 }
 .oferta__texto {
-  padding: 9% 4% 5% 21%;
+  padding: 9% 4% 5% 9%;
 }
 .oferta__img {
   position: absolute;
   left: 0;
   top: 0;
+}
+.oferta__h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 19px;
+  margin: 0 0 3px;
+}
+.oferta__h2--segundo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 25px;
+}
+.oferta__span {
+  font-size: 109px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 90px;
+  letter-spacing: -3.5px;
+}
+.oferta__span--segundo {
+  font-family: "Poppins", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 63px;
+  letter-spacing: -2px;
+}
+.oferta__p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 30px;
+}
+.oferta__p--segundo {
+  line-height: 23px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 25px;
 }
 
 @media (max-width: 1700px) {
