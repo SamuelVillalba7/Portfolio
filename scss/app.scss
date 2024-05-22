@@ -7,6 +7,7 @@ $padding-container-phone: 0 2rem;
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -238,10 +239,7 @@ body{
         
         
         &--headphone{
-            padding: 5px 10px;
-            padding-top: 15px;
-            height: 2rem;
-            width: 11rem;
+           height: 2.5rem;
         }
 
         &--gadgets{
@@ -345,7 +343,8 @@ body{
 }
 
 .servicios-container{
-    height: 100px;
+    height: auto;
+    width: 100%;
     padding: $padding-container;
     padding-top: 5%;
     display: flex;
@@ -356,17 +355,18 @@ body{
 
 .servicio{
     width: 20%;
+    height: 3.125rem;
     display: flex;
     
     &:first-of-type{
         .servicio__img{
-            max-width: 20%;
+            width: 20%;
         }
     }
     
 
     &__img{
-        max-width: 15%;
+       width: 15%;
        
     }
     &__texto{
@@ -393,16 +393,6 @@ body{
 
 .oferta-container{
     padding: $padding-container;
-    &:last-of-type{
-        .oferta{
-            background-color: #2dd06e;
-        }
-        
-        .oferta__img{
-                left: 16%;
-        }
-
-    }
 }
 
 .oferta{
@@ -413,6 +403,10 @@ body{
     border-radius: 1.875rem;
     background-color: #f42c37;
     color: white;
+
+    &--last{
+        background-color: #2dd06e;
+    }
 
     
     
@@ -440,6 +434,10 @@ body{
         position: absolute;
         left: 5%;
         bottom: -35%;
+
+        &--last{
+            left: 16%;
+        }
        
         
     }
@@ -492,35 +490,138 @@ body{
 
 
 .cajita{
-    height: 400px;
+    height: 250px;
 }
 
 .publicidad{
 
     width: 100%;
+    max-width: 100%;
     display: flex;
-    background-color: red;
+    background-color: #cfcfcf;
+    height: 250px;
 
     &__item{
-        min-width:20%;
-        border: #000 solid 1px;
-        height: 250px;
+        width:20%;       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            .publicidad__img{
+               
+                opacity: 1;
+            }
+        }
+
     
     }
     &__img{
-        border: #147aff solid 4px;
-        width: 40px;
-        height:40px;
+        opacity: 0.2;   
+        transition: all 0.5s;
     }
+
+
+
+}
+.title-container{
+    padding: $padding-container;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 100px 0px;
+}
+.title{
+
+    font-family: $fuente-secundaria;
+    font-weight: 700;
+    font-size:  3rem;
+    letter-spacing: -1.7px;
+
+    &__text{
+    font-family: $fuente-primaria;
+    font-size: 1rem;
+    color: #838383;
+
+    }
+
+}
+
+.news-container{
+    padding: $padding-container;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.new{
+    width: 30%;
+    height: auto;
+
+    &__text-container{
+        max-width: 70%;
+    }
+
+    &__img{
+        max-width: 100%;
+        height: auto;
+        border-radius: 2rem;
+        margin-bottom: 1.3rem;
+    }
+
+    &__span{
+
+        font-size: 1rem;
+       
+        font-family: $fuente-primaria;
+    }
+
+    &__h3{
+        font-size: 1.3rem;
+        font-family: $fuente-secundaria;
+        margin: 1rem 0px;
+    }
+
+    &__p{
+        font-size: 1rem;
+        font-family: $fuente-primaria;
+        
+    }
+
+
 
 
 }
 
 
 
-
-
 @media (max-width: 1700px) {
+    
+    .header{
+        padding:$padding-container-phone ;
+    }
+    .categorias-container{
+        padding:$padding-container-phone ;
+    }
+    .servicios-container{
+        padding:$padding-container-phone ;
+    }
+    .oferta-container{
+        padding:$padding-container-phone ;
+    }
+    .title-container{
+        padding:$padding-container-phone ;
+    }
+    .news-container{
+        padding:$padding-container-phone ;
+    }
+
+    .categoria__img--speaker{
+        left: 5%;
+    }
     
 
     .categoria__p--headphone{

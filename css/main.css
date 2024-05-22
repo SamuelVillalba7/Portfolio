@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -186,10 +187,7 @@ body {
   z-index: 999;
 }
 .categoria__boton--headphone {
-  padding: 5px 10px;
-  padding-top: 15px;
-  height: 2rem;
-  width: 11rem;
+  height: 2.5rem;
 }
 .categoria__boton--gadgets {
   background-color: white;
@@ -271,7 +269,8 @@ body {
 }
 
 .servicios-container {
-  height: 100px;
+  height: auto;
+  width: 100%;
   padding: 0 9rem;
   padding-top: 5%;
   display: flex;
@@ -281,13 +280,14 @@ body {
 
 .servicio {
   width: 20%;
+  height: 3.125rem;
   display: flex;
 }
 .servicio:first-of-type .servicio__img {
-  max-width: 20%;
+  width: 20%;
 }
 .servicio__img {
-  max-width: 15%;
+  width: 15%;
 }
 .servicio__texto {
   display: flex;
@@ -309,12 +309,6 @@ body {
 .oferta-container {
   padding: 0 9rem;
 }
-.oferta-container:last-of-type .oferta {
-  background-color: #2dd06e;
-}
-.oferta-container:last-of-type .oferta__img {
-  left: 16%;
-}
 
 .oferta {
   display: flex;
@@ -324,6 +318,9 @@ body {
   border-radius: 1.875rem;
   background-color: #f42c37;
   color: white;
+}
+.oferta--last {
+  background-color: #2dd06e;
 }
 .oferta__caja--primera {
   width: 65%;
@@ -343,6 +340,9 @@ body {
   position: absolute;
   left: 5%;
   bottom: -35%;
+}
+.oferta__img--last {
+  left: 16%;
 }
 .oferta__h2 {
   font-size: 1rem;
@@ -383,26 +383,107 @@ body {
 }
 
 .cajita {
-  height: 400px;
+  height: 250px;
 }
 
 .publicidad {
   width: 100%;
+  max-width: 100%;
   display: flex;
-  background-color: red;
-}
-.publicidad__item {
-  min-width: 20%;
-  border: #000 solid 1px;
+  background-color: #cfcfcf;
   height: 250px;
 }
+.publicidad__item {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.publicidad__item:hover .publicidad__img {
+  opacity: 1;
+}
 .publicidad__img {
-  border: #147aff solid 4px;
-  width: 40px;
-  height: 40px;
+  opacity: 0.2;
+  transition: all 0.5s;
+}
+
+.title-container {
+  padding: 0 9rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px 0px;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: -1.7px;
+}
+.title__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #838383;
+}
+
+.news-container {
+  padding: 0 9rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.new {
+  width: 30%;
+  height: auto;
+}
+.new__text-container {
+  max-width: 70%;
+}
+.new__img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2rem;
+  margin-bottom: 1.3rem;
+}
+.new__span {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+.new__h3 {
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  margin: 1rem 0px;
+}
+.new__p {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media (max-width: 1700px) {
+  .header {
+    padding: 0 2rem;
+  }
+  .categorias-container {
+    padding: 0 2rem;
+  }
+  .servicios-container {
+    padding: 0 2rem;
+  }
+  .oferta-container {
+    padding: 0 2rem;
+  }
+  .title-container {
+    padding: 0 2rem;
+  }
+  .news-container {
+    padding: 0 2rem;
+  }
+  .categoria__img--speaker {
+    left: 5%;
+  }
   .categoria__p--headphone {
     font-size: 12vw;
   }
