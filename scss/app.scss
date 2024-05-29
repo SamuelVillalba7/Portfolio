@@ -350,6 +350,7 @@ body{
     display: flex;
     justify-content: space-around;
     margin-bottom: 13rem;
+    margin-top: 3rem;
 }
 
 
@@ -406,6 +407,7 @@ body{
 
     &--last{
         background-color: #2dd06e;
+        margin-top: 12rem;
     }
 
     
@@ -494,7 +496,7 @@ body{
 }
 
 .publicidad{
-
+    margin: 7rem 0;
     width: 100%;
     max-width: 100%;
     display: flex;
@@ -596,6 +598,126 @@ body{
 
 }
 
+.product-container{
+    padding: $padding-container;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.product{
+
+    width: 25%;
+    height: auto;
+    padding: 0px 1rem;
+    margin-top: 2rem ;
+    
+
+    &__sale{
+        position: absolute;
+        font-size: 13px;
+        left: 4%;
+        top: 4%;
+        border-radius:50% ;
+        background-color:#f42c37;
+        color: white;
+        font-family: $fuente-primaria;
+        font-weight: 700;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+
+    }
+   
+
+    &__img-container{
+        width: 100%;
+        position: relative;
+    }
+    &__img{
+        border-radius: 1rem;
+        width: 100%;
+    }
+
+    &__name{
+        font-family: $fuente-secundaria;
+        font-size: 1rem;
+        line-height: 24px;
+        letter-spacing: -1px;
+        font-weight: 400;
+        margin-bottom: 8px;
+    }
+    &__price{
+        font-weight: 700;
+        font-size: 1.3rem;
+        font-family: $fuente-primaria;
+    }
+}
+
+.footer-container{
+    padding: $padding-container;
+    margin-bottom: 5rem;
+
+}
+.footer{
+    display: flex;
+
+    &__title{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    &__box{
+        width: 25%;
+        border: #090 1px solid;
+        
+    }
+    &__box2{
+        width: 20%;
+        border: #090 1px solid;
+    }
+    &__box3{
+        width: 20%;
+        border: #090 1px solid;
+    }
+    &__box4{
+        width: 35%;
+        border: #090 1px solid;
+    }
+
+   /*
+    &__p{
+
+    }
+    &__span{
+        
+    }
+    &__li{
+        
+    }
+*/
+}
+
+.end{
+
+    background-color: #000;
+    padding: $padding-container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+
+    &__span{
+        color: #AAAAAA;
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: -.8px;
+
+    }
+}
 
 
 @media (max-width: 1700px) {
@@ -617,6 +739,10 @@ body{
     }
     .news-container{
         padding:$padding-container-phone ;
+    }
+
+    .product-container{
+        padding: $padding-container-phone;
     }
 
     .categoria__img--speaker{
