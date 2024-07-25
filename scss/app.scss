@@ -33,13 +33,13 @@ body{
     }
     
     &__logo{
-        margin-right: 20px;
+        margin-right: 1.25rem;
         color: crimson;
         display: flex;
         justify-content: center;
     }
     &__a {
-        margin-right:20px ;
+        margin-right:1.25rem ;
         color: black;
         text-decoration: none;
         &:last-of-type{
@@ -49,7 +49,7 @@ body{
     
     &__li{
         display: inline;
-        margin-right: 35px ;
+        margin-right: 2.1875rem ;
     }
 
 }
@@ -61,8 +61,8 @@ body{
     padding:$padding-container;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 90vh 400px 400px;
-    grid-gap: 35px;
+    grid-template-rows: 90vh 25rem 25rem;
+    grid-gap: 2.1875rem;
 
     grid-template-areas: 
     "headphone headphone headphone headphone"
@@ -81,10 +81,10 @@ body{
 
     &__caja{
         &--earphone{
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
         }
         &--gadgets{
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
         }
 
     }
@@ -178,14 +178,14 @@ body{
         font-size: 1.875rem;
         font-family: $fuente-secundaria;
         font-weight: 600;
-        line-height: 46px;
+        line-height: 2.875rem;
         letter-spacing: -1px;
         margin: 0 0 -5px;
 
         &--headphone{
             font-size: 5rem;
             font-weight: 700;
-            line-height: 120px;
+            line-height: 7.5rem;
             letter-spacing: -2px;
             margin: 0;
             color: #000;
@@ -211,7 +211,7 @@ body{
         &--headphone{
             // font-size: 13rem;
             font-size: 10.5vw;
-            line-height: 150px;
+            line-height: 9.375rem;
             letter-spacing: -2.9px;
             opacity: unset;
             margin-bottom: 0px; 
@@ -233,7 +233,7 @@ body{
         background-color: #f42c37;;
         border-radius: 2rem;
         text-align: center;
-        padding: 10px 30px;
+        padding: .625rem 1.875rem;
         text-decoration: none;
         z-index: 999;
         
@@ -433,6 +433,7 @@ body{
     }
 
     &__img{
+     
         position: absolute;
         left: 5%;
         bottom: -35%;
@@ -501,7 +502,7 @@ body{
     max-width: 100%;
     display: flex;
     background-color: #cfcfcf;
-    height: 250px;
+    height: 15.625rem;
 
     &__item{
         width:20%;       
@@ -802,7 +803,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 4.375rem;
 
     &__span{
         color: #AAAAAA;
@@ -816,6 +817,36 @@ body{
 
 @media (max-width: 1700px) {
     
+    *{
+        font-size: 12px;
+    }
+
+
+    .oferta{
+
+        &__img{
+            width: 90%;
+
+            &--last{
+                width: 60%; 
+            }
+        }
+    }
+
+    .categoria{
+
+        &__img{
+            &--laptop{
+                width:90% ;
+             }
+            
+        }
+    }
+
+
+
+   
+    /*
     .header{
         padding:$padding-container-phone ;
     }
@@ -846,7 +877,7 @@ body{
 
     .categoria__p--headphone{
         font-size: 12vw;
-    }
+    }  */
 }
 
 

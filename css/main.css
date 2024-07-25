@@ -24,13 +24,13 @@ body {
   justify-content: center;
 }
 .header__logo {
-  margin-right: 20px;
+  margin-right: 1.25rem;
   color: crimson;
   display: flex;
   justify-content: center;
 }
 .header__a {
-  margin-right: 20px;
+  margin-right: 1.25rem;
   color: black;
   text-decoration: none;
 }
@@ -39,15 +39,15 @@ body {
 }
 .header__li {
   display: inline;
-  margin-right: 35px;
+  margin-right: 2.1875rem;
 }
 
 .categorias-container {
   padding: 0 9rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 90vh 400px 400px;
-  grid-gap: 35px;
+  grid-template-rows: 90vh 25rem 25rem;
+  grid-gap: 2.1875rem;
   grid-template-areas: "headphone headphone headphone headphone" "earphone gadgets laptop laptop" "console console oculus speaker";
 }
 
@@ -56,10 +56,10 @@ body {
   position: relative;
 }
 .categoria__caja--earphone {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 .categoria__caja--gadgets {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 .categoria__caja-bottom {
   display: flex;
@@ -135,14 +135,14 @@ body {
   font-size: 1.875rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  line-height: 46px;
+  line-height: 2.875rem;
   letter-spacing: -1px;
   margin: 0 0 -5px;
 }
 .categoria__span--headphone {
   font-size: 5rem;
   font-weight: 700;
-  line-height: 120px;
+  line-height: 7.5rem;
   letter-spacing: -2px;
   margin: 0;
   color: #000;
@@ -163,7 +163,7 @@ body {
 }
 .categoria__p--headphone {
   font-size: 10.5vw;
-  line-height: 150px;
+  line-height: 9.375rem;
   letter-spacing: -2.9px;
   opacity: unset;
   margin-bottom: 0px;
@@ -182,7 +182,7 @@ body {
   background-color: #f42c37;
   border-radius: 2rem;
   text-align: center;
-  padding: 10px 30px;
+  padding: 0.625rem 1.875rem;
   text-decoration: none;
   z-index: 999;
 }
@@ -394,7 +394,7 @@ body {
   max-width: 100%;
   display: flex;
   background-color: #cfcfcf;
-  height: 250px;
+  height: 15.625rem;
 }
 .publicidad__item {
   width: 20%;
@@ -615,7 +615,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: 4.375rem;
 }
 .end__span {
   color: #AAAAAA;
@@ -625,33 +625,50 @@ body {
 }
 
 @media (max-width: 1700px) {
-  .header {
-    padding: 0 2rem;
+  * {
+    font-size: 12px;
   }
-  .categorias-container {
-    padding: 0 2rem;
+  .oferta__img {
+    width: 90%;
   }
-  .servicios-container {
-    padding: 0 2rem;
+  .oferta__img--last {
+    width: 60%;
   }
-  .oferta-container {
-    padding: 0 2rem;
+  .categoria__img--laptop {
+    width: 90%;
   }
-  .title-container {
-    padding: 0 2rem;
+  /*
+  .header{
+      padding:$padding-container-phone ;
   }
-  .news-container {
-    padding: 0 2rem;
+  .categorias-container{
+      padding:$padding-container-phone ;
   }
-  .product-container {
-    padding: 0 2rem;
+  .servicios-container{
+      padding:$padding-container-phone ;
   }
-  .categoria__img--speaker {
-    left: 5%;
+  .oferta-container{
+      padding:$padding-container-phone ;
   }
-  .categoria__p--headphone {
-    font-size: 12vw;
+  .title-container{
+      padding:$padding-container-phone ;
   }
+  .news-container{
+      padding:$padding-container-phone ;
+  }
+
+  .product-container{
+      padding: $padding-container-phone;
+  }
+
+  .categoria__img--speaker{
+      left: 5%;
+  }
+
+
+  .categoria__p--headphone{
+      font-size: 12vw;
+  }  */
 }
 /* fin header  */
 
