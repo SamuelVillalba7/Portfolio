@@ -17,7 +17,6 @@ export default function Contact (){
                     un email o chatea conmigo a través de Linkedin!  </p>
                 <div className="contact-box">
                     <a href="https://api.whatsapp.com/send/?phone=541151017739&text&type=phone_number&app_absent=0" target="_blank"><img src={telefono} alt=""/> 541151017739</a>
-                
                     <a href="https://www.linkedin.com/in/samuel-villalba/" target="_blank"> <img src={linkedin} alt=""/>Samuel Villalba</a>
                     <a href="https://github.com/SamuelVillalba7" target="_blank"><img src={github} alt=""/>SamuelVillalba7</a>
                     <a href="mailto:villalbasamuel2004@gmail.com"><img src={gmail} alt=""/>Villalbasamuel2004@gmail.com</a>
